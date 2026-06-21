@@ -1,12 +1,12 @@
-#include "GameScene.h"
-#include "KamataEngine.h"
 #include <Windows.h>
+#include "KamataEngine.h"
+#include "GameScene.h"
 
 using namespace KamataEngine;
 
 // Windowsアプリでのエントリーポイント(main関数)
 int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
-
+	
 	// エンジンの初期化
 	KamataEngine::Initialize(L"LE3D_25_ヤリタ_コウヤ_CG4");
 
@@ -40,7 +40,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int) {
 
 	// ゲームシーンの解放
 	delete gameScene;
-
+	
 	// nullptrの代入
 	gameScene = nullptr;
 

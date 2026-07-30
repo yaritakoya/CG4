@@ -1,10 +1,16 @@
 #pragma once
 #include "KamataEngine.h"
+#include "Particle.h"
+
+using namespace KamataEngine;
 
 // ゲームシーン
 class GameScene {
 
-	public:
+public:
+	//デストラクタ
+	~GameScene();
+	
 	// 初期化
 	void Initialize();
 
@@ -13,4 +19,12 @@ class GameScene {
 
 	// 描画
 	void Draw();
+
+private:
+	// パーティクル3Dモデルデータ
+	Model* modelParticle_ = nullptr;
+	//カメラ
+	Camera camera_;
+	//
+	Particle* particle_ = nullptr;
 };
